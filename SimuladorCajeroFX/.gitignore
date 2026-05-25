@@ -1,0 +1,35 @@
+# ====================================================================
+# GITIGNORE PARA PROYECTOS JAVA ANT (NETBEANS CLASSIC)
+# Diseñado para: ControlEscolarFX / GitHub Desktop
+# ====================================================================
+
+# --- Compilación y Salidas de Artefactos ---
+# Ignora las clases compiladas y los archivos empaquetados finales
+**/build/
+**/dist/
+nbproject/private/
+
+# --- Archivos de Configuración Local y Caché de NetBeans ---
+# Conserva la estructura del proyecto pero ignora archivos del usuario local
+nbproject/project.properties
+!nbproject/project.xml
+!nbproject/project.properties
+
+# Nota: NetBeans almacena configuraciones esenciales en project.xml y project.properties.
+# Sin embargo, el estado de la interfaz de usuario local y datos privados van a nbproject/private/ (ignorado arriba).
+
+# --- Archivos de Sistema Operativo / IDEs alternativos ---
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.sql.bak
+
+# Archivos por si accidentalmente se abre con IntelliJ o VS Code
+.idea/
+.vscode/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

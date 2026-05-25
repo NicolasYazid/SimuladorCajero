@@ -1,11 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.simuladorcajerofx.controladores.HistorialController">
-    
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.simuladorcajerofx.controladores.HistorialController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView fitWidth="150" preserveRatio="true">
+                     <image>
+                        <Image url="@/imagenes/logo.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <FlowPane>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120" text="Bienvenido:" />
+                              <Label fx:id="lbl_nombre" styleClass="lbl-nombre" text="" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120" text="Número de tarjeta:" />
+                              <Label fx:id="lbl_tarjeta" styleClass="lbl-tarjeta" text="" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Tu saldo es de: " />
+                        <Label fx:id="lbl_saldo" styleClass="lbl-saldo" text="" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tbl_datos" BorderPane.alignment="CENTER" styleClass="table-view">
+        <columns>
+          <TableColumn fx:id="col_fecha" text="Fecha y hora" prefWidth="200" />
+          <TableColumn fx:id="col_tipo" text="Tipo de operación" prefWidth="200" />
+            <TableColumn fx:id="col_importe" text="Importe" prefWidth="300" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button onAction="#actionRegresar" styleClass="btn-cancelar" text="Regresar" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
